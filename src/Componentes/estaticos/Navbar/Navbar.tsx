@@ -8,6 +8,7 @@ import { createStyles, alpha, Theme, makeStyles } from '@material-ui/core/styles
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -82,7 +83,12 @@ export default function SearchAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-           DANIELLE
+              {/* <a href='/home'>HOME</a> */}
+              <Link to='/home'>Home</Link>
+          </Typography>
+          <Typography className={classes.title} variant="h6" noWrap>
+           {/* <a href="/about">ABOUT</a> */}
+           <Link to='/about'>About</Link>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
